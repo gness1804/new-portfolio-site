@@ -17,6 +17,8 @@ I want to create a new portfolio site. That is a personal site that advertises t
 - A section for a personal blog. This blog could be about both technical and non-technical topics. For instance, I might want to post some of my pieces about religion and secularism on the space. 
 - Room for other sections in the future.  
 
+We need to choose an appropriate framework to create the site in. Since it's a static site, I would want a framework that makes it easy to create and generate static sites. I think I want a framework that allows you to add copy in Markdown documents and then processes the copy and outputs the site. 
+
 ## Acceptance criteria
 
 - A nice-looking portfolio site that has all of the information described above. 
