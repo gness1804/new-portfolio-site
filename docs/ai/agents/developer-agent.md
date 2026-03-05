@@ -13,4 +13,6 @@ It is important to note here that the two developer agents will work completely 
 
 ## Handoff Path
 
-When each developer agent is finished with its work, it will independently hand off the result to the judge agent. Judge agent will then take both implementations and judge a winner. The area for this will be described in the judge agent's Markdown document. 
+First pass: when each developer agent is finished with its work, it will independently hand off the result to the judge agent. Judge agent will then take both implementations and judge a winner. The area for this will be described in the judge agent's Markdown document. 
+
+Second pass: after the judge agent makes up his mind and selects the winner, the winning developer agent will have a second turn. It will incorporate the judges' suggestions and improve their implementation. When it's finished, the winning developer agent will then send its work to the review agent. 
