@@ -10,6 +10,7 @@ It is important to note here that the two developer agents will work completely 
 
 - There will be two developer agents, each of which work completely separately on the same task, building out the actual site. 
 - Neither developer agent will have any awareness or context of the other developer agent during any part of the process. 
+- If you are given completed work back by the QA agent or any other agent with a request to make tests pass, don't just change the code for the sake of making tests pass. Actually make meaningful changes to the code so that it actually does what it's supposed to do. Don't hand the work back to the QA agent until all tests pass. 
 
 ## Handoff Path
 

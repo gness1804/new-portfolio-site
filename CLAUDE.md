@@ -2,7 +2,9 @@
 
 ## Basic principles and project overview
 
-- This is an AI-first site. The philosophy is to use AI to build out the website from scratch. As such, the project structure reflects this. There is a docs directory. Within that is an AI directory, and within that is an agents directory. (So it's docs/ai/agents.) The agents directory contains instruction documents for all of the particular agents that will be building out the site. It is very important that all of these instruction documents in the agents directory be followed precisely. They describe what is needed for each agent. I want the site to be built out by orchestrated agents working together. During the flow, there are several checkpoints when the system will check in with me, the human user, for approval and feedback. I have noted those below. The approximate flow is as follows: 
+- This is an AI-first site. The philosophy is to use AI to build out the website from scratch. As such, the project structure reflects this. There is a docs directory. Within that is an AI directory, and within that is an agents directory. (So it's docs/ai/agents.) The agents directory contains instruction documents for all of the particular agents that will be building out the site. It is very important that all of these instruction documents in the agents directory be followed precisely. They describe what is needed for each agent. I want the site to be built out by orchestrated agents working together. During the flow, there are several checkpoints when the system will check in with me, the human user, for approval and feedback. I have noted those below. I describe the intended site content in ##Site Content below. 
+
+The approximate flow is as follows: 
 	1. Main agent: The orchestrator of the project. The Project Manager. Oversees the other agents and ensures that the workflow is effective and seamless. 
 	2. Researcher agent: Researches different tech stacks and recommends the ones best suited to the project.  
 	3. Planner agent: Create a detailed implementation plan for the entire project. This goes from the scaffolding of the site all the way to a polished final project and QA. (user feedback checkpoint: Human user must approve the plan before it moves forward.)
@@ -19,12 +21,12 @@
 
 ## Site content
 
-- For details on the intended content of the site, see the following document. .cursor/features/1-project-overview-new-portfolio-site.md
-- The site will have the following sections: home page, my projects, my resume and skill set, and personal blog. The latter should eventually have entries on a variety of subjects, both technical and non-technical. It's up to the agent how exactly to structure the site. But I would like some sort of traditional tab format for each of the sections, and a hamburger menu for mobile. 
-- I will provide some content for the site in the form of Markdown files in docs/site-contents. Agents should flesh out this content and expand upon it. 
+- **For full details on the intended content of the site, see the following document. .cursor/features/1-project-overview-new-portfolio-site.md**. The below is just a few extra points. 
+- I would like some sort of traditional tab format for each of the sections, and a hamburger menu for mobile. 
+- I will provide some content for the site in the form of Markdown files in docs/site-contents. The content may not always be complete in this case, agents should flesh out this content and expand upon it. 
 	1. In content creation and editing, don't guess. Don't make assumptions. If you don't know something, ask me. I don't want there to be any hallucinations or any misstatements on the site.
 	2. To the extent possible, this site should be in my voice. If you need writing samples from me to better learn my voice, then ask for them. 
-	3. The sub-agents will have creative freedom within the following boundaries: must adhere to my voice, must stick to the f acts, must not stray off topic, must not introduce any controversial opinions (e.g. religious, political) unless the content in question is specifically about these topics. The sub-agents must also follow common sense rules as far as not saying anything offensive with respect to gender, sexual orientation, race, religion, etc.  
+	3. The sub-agents will have creative freedom within the following boundaries: must adhere to my voice, must stick to the facts, must not stray off topic, must not introduce any controversial opinions (e.g. religious, political) unless the content in question is specifically about these topics. The sub-agents must also follow common sense rules as far as not saying anything offensive with respect to gender, sexual orientation, race, religion, etc.  
 - The site will also involve a personal logo. For more details on that, see the cursor features document described above. 
 
 # Tech specs
