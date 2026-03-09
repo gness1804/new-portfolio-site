@@ -192,7 +192,7 @@ After the judge agent selects a winner, the winning developer agent will:
 - Re-run test results
 - Updated documentation (if changed)
 
-## Handoff Message Format
+## Handoff Message Format -- Example
 
 ### To Judge (First Pass)
 
