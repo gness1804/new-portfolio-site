@@ -94,8 +94,7 @@ For each implementation:
 - If scores within 2 points: Review tie-breaking criteria below
 - Document decision rationale
 
-#### Tie-Breaking Criteria (if scores within 2 points)(most to least important for tie 
--breaking)
+#### Tie-Breaking Criteria (if scores within 2 points)(most to least important for tie-breaking)
 
 1. Which has fewer critical bugs?
 2. Which is more maintainable?
@@ -111,7 +110,7 @@ For the WINNING implementation, provide:
 
 ## Scoring Documentation Format
 
-For each implementation, provide:
+For each implementation, provide a feedback document modeled on the following:
 
 ```
 IMPLEMENTATION A EVALUATION
@@ -139,7 +138,7 @@ Breakdown:
    - Justification: Attractive and professional appearance
 
 4. UI/UX: 22/25
-   - Functionality: 8/8 (Everything works perfectly)
+   - Functionality: 8/8 (Everything works perfectly) -- (human user: but note also the minor UI bug listed under point one above. To AI agents: please be sure that your reviews are internally consistent)
    - Intuitiveness: 6/7 (Very intuitive, minor menu issue)
    - Smoothness: 5/5 (Excellent transitions and performance)
    - Consistency: 3/5 (Some inconsistent button styles)
@@ -180,6 +179,7 @@ If one implementation missing major features from plan:
 - Automatically disqualify incomplete implementation
 - Document what's missing
 - Winning implementation is the complete one (even if lower quality)
+- Work with Winning Implementation Agent to improve their implementation 
 
 ### Scores Differ by Less than 3 Points
 Provide extra detailed justification:
@@ -198,7 +198,7 @@ Once the judge has finished all of the above steps:
 5. **Give Instructions**: Tell winning developer to implement improvements
 6. **Ignore Loser**: Do not reactivate losing developer agent
 
-## Handoff Message Format
+## Handoff Message Format - Example
 
 ```
 TO: Developer Agent A (WINNER)
