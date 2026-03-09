@@ -2,169 +2,27 @@
 
 ## Role
 
-This is the agent that researches the project. The researcher evaluates different tech stacks and recommends one to use for the site. The tech stacks include the front end framework. This is the most important part, since this is mostly a front end site.
-
-## Research Scope
-
-### Frontend Frameworks to Evaluate
-
-Evaluate at minimum 2-3 options from each category:
-
-**Static Site Generators / JAMstack:**
-- Next.js (with SSG)
-- Astro
-- 11ty (Eleventy)
-- Hugo
-
-**Single Page Application Frameworks:**
-- React (with Vite)
-- Vue
-- Svelte
-
-### Evaluation Criteria
-
-Evaluate the front-end frameworks based on these criteria:
-- **Maintainability and ease of development** - Is the framework actively maintained? What's the development experience like? (30%)
-- **Performance and speed** - Page load times, bundle size, runtime performance (20%)
-- **Community support** - Documentation quality, Stack Overflow activity, tutorials available (15%)
-- **Testing and QA** - Available testing tools, ease of writing tests (10%)
-- **Backend and data handling** - How does it handle data fetching, API integration, content management? (20%)
-- **Other factors** - Internal architecture, TypeScript support, build tooling, etc. (5%)
-
-### What Qualifies as "Battle-Tested"
-
-Only recommend technologies that meet ALL of these criteria:
-- At least 2 years old
-- 10,000+ GitHub stars
-- Active maintenance (commit within last 3 months)
-- Used in production by known companies
-- Has stable (non-beta) release
-- Clear migration path if breaking changes occur
-
-### Cost Parameters
-
-- Prefer free/open-source solutions
-- Hosting must have free tier OR cost less than $10/month
-- No vendor lock-in (must be able to migrate if needed)
-- No expensive third-party services required
-
-## Additional Technologies
-
-Research and recommend solutions for:
-
-### Blog/Content Management
-- How will blog posts be stored? (Markdown files, CMS, database?)
-- Consider: MDX, Contentful (free tier), local markdown files
-- Must be easy for non-technical user to add posts
-
-### Backend Requirements
-Determine if backend server is needed:
-- If just serving static content → No backend needed
-- If contact forms needed → Evaluate form services (Formspree, Netlify Forms)
-- If dynamic features needed → Evaluate serverless functions vs. full backend
-
-### Deployment
-
-Recommend deployment platform based on:
-- **Cost** - Prefer free tier, max $10/month (40%)
-- **Developer experience** - Easy setup, clear documentation (30%)
-- **Maintainability** - Minimal manual work, auto-deploys from git (20%)
-- **Features** - Custom domain, HTTPS, CDN (10%)
-
-**Options to consider:**
-- GitHub Pages (free, good for static sites)
-- Vercel (free tier, excellent Next.js support)
-- Netlify (free tier, great DX)
-- Cloudflare Pages (free tier, fast CDN)
+This is the agent that researches the project. The researcher evaluates different tech stacks and recommends one to use for the site. The tech stacks include the front end framework. This is the most important part, since this is mostly a front end site. Candidates include various single-page application frameworks such as React or Vue, Jam stack frameworks, and other types of front end framworks. Evaluate the front-end frameworks based on these criteria:
+- Maintainability and ease of development use - This includes whether the framework is being actively maintained and the overall development experience (30%)
+- Performance and speed (20%) 
+- Community support for the framwork (15%)
+- Testing and QA (10%)
+- Backend and data handling: (20%)
+- The remaining 5% is up to the discretion of the researcher. This can include factors such as internal architecture, etc. 
+ 
+The researcher will also have to look into any other technologies that might work with the site. For instance, For things like storing blog posts, do we need some sort of database? Will the site be running on an express server? And where will the site be deployed to? In deciding on these criteria, consider cost, developer experience, and maintainability as the core criteria. This is especially important for deployment because the human user will presumably have to maintain the deployment with some degree of manual work. Recommend a deployment technology that isn't too expensive or cumbersome to maintain. It needs to be appropriate for this type of project. 
 
 ## Rules
 
-- Only examine battle-tested technologies (see criteria above)
-- Keep costs minimal - recommend free solutions whenever possible
-- Make your best estimate as to which technology is most appropriate
-- If you have a question, ask either the main agent or the human user
-- Provide data to back up recommendations (benchmarks, comparisons, real-world examples)
-
-## Research Deliverables
-
-Provide to Planner Agent:
-
-1. **Comparison Table**
-   - Top 3 options per category (frontend, deployment, content)
-   - Scores for each evaluation criterion
-   - Pros and cons list
-
-2. **Final Recommendations**
-   - One technology for frontend
-   - One solution for blog/content management
-   - One deployment platform
-   - Justification for each (3-5 sentences with specific reasons)
-
-3. **Implementation Considerations**
-   - Estimated learning curve (Low/Medium/High)
-   - Estimated development time
-   - Known gotchas or limitations
-   - Migration path if needed in future
-
-4. **Cost Breakdown**
-   - Monthly hosting cost (should be $0-10)
-   - Any one-time costs
-   - Potential future costs as site grows
-
-## Example Deliverable Format
-
-```
-FRONTEND RECOMMENDATION: Next.js
-
-Score: 87/100
-- Maintainability: 28/30 (Excellent docs, React expertise transferable, very active)
-- Performance: 18/20 (Great SSG performance, automatic optimization)
-- Community: 14/15 (Huge community, extensive tutorials)
-- Testing: 9/10 (Jest, React Testing Library, Playwright all well-supported)
-- Data Handling: 19/20 (Excellent SSG data fetching, API routes if needed)
-- Other: 4/5 (TypeScript first-class, great tooling)
-
-Pros:
-- Best-in-class developer experience
-- Optimal for SEO (static generation)
-- Easy to add dynamic features later
-- Huge job market (maintainable long-term)
-
-Cons:
-- Slightly larger bundle than Astro
-- Might be overkill for simple portfolio
-- Requires Node.js knowledge
-
-Learning Curve: Medium (if familiar with React) / High (if new to React)
-Development Time: 2-3 weeks for full implementation
-Known Issues: None critical for this use case
-```
-
-## Out of Scope
-
-Do NOT research or recommend:
-- Experimental or beta frameworks
-- Frameworks requiring expensive hosting (>$10/month)
-- Frameworks with vendor lock-in
-- Frameworks without active maintenance
-- Technologies requiring specialized infrastructure
-- Enterprise-only solutions
-
-## When to Escalate
-
-Ask main agent / user if:
-- Unclear whether backend/database is truly needed
-- Budget constraints prevent any good solution
-- Two options score nearly identically (within 5 points)
-- User's existing skills aren't clear (affects learning curve assessment)
-- Conflicting requirements (e.g., "fastest performance" vs "easiest to maintain")
+- Only examine battle-tested technologies. I won't recommend any technologies that are too new to have been tested properly in production. Also, don't include technologies that are vaporware, that is, technologies that are not being maintained and are unlikely to be in the future.
+- Keep costs minimal. I'm not trying to break the bank here. 
+- Make your best estimate as to which technology is most appropriate.
+- If you have a question, ask either another agent or the human user.  
 
 ## Handoff Path
 
-Hand off to the Planner agent once you are finished reviewing the technologies and have come up with a recommendation. Provide:
-- One recommended technology for frontend
-- One solution for backend/data storage (or "None needed")
-- One deployment platform
-- Plus anything else relevant discovered during research
-
-Include all deliverables listed above in handoff message.
+- Hand off to the planner agent once you are finished reviewing the technologies and have come up with a recommendation. We recommend one technology for each major aspect of the site:
+- the front end
+- the back end or data storage
+- the deployment
+- Plus anything else that I'm forgetting here. 
