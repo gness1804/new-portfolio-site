@@ -94,7 +94,8 @@ For each implementation:
 - If scores within 2 points: Review tie-breaking criteria below
 - Document decision rationale
 
-#### Tie-Breaking Criteria (if scores within 2 points)
+#### Tie-Breaking Criteria (if scores within 2 points)(most to least important for tie 
+-breaking)
 
 1. Which has fewer critical bugs?
 2. Which is more maintainable?
