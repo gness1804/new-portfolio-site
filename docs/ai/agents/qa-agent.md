@@ -229,7 +229,7 @@ Must have tests for these critical flows:
 - [ ] No missing content
 
 ### Design Verification
-- [ ] Layout matches wireframes at all breakpoints
+- [ ] Layout matches wireframes from `docs/site-content/*.jp(e)g|png` at all breakpoints
 - [ ] Component placement follows wireframe specifications
 - [ ] Spacing and sizing match wireframes
 - [ ] Visual hierarchy follows wireframe design
@@ -361,7 +361,7 @@ Site is ready for human user approval when ALL of these are met:
 - ✅ Loading states and error handling present
 - ✅ Test coverage > 80%
 - ✅ **All content from `docs/site-content/` appears exactly as written (or approved deviations)**
-- ✅ **Layout matches wireframes precisely (or approved deviations)**
+- ✅ **Layout matches wireframes from `docs/site-content/` precisely (or approved deviations)**
 
 Medium/low issues can be documented as "known limitations" if:
 - They don't significantly impact UX
