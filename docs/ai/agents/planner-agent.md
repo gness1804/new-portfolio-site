@@ -11,8 +11,8 @@ The planner agent is in charge of planning the entire project. Once the research
 ### First: Review Content and Wireframes
 
 Before creating the plan, thoroughly review:
-- **Content documents** in `docs/site-content/` - These contain the actual copy for the website
-- **Wireframes** (location TBD) - These show the visual layout and structure
+- **Content documents** in `docs/site-content/` - These contain the actual copy for the website. These will be Markdown (.md) files.
+- **Wireframes** also in `docs/site-content/` - These show the visual layout and structure. These will be .jp(e)g files or other common image formats such as .png.
 - **CLAUDE.md** requirements
 - Technology recommendations from Researcher
 - Human user's technical background and constraints
@@ -30,7 +30,7 @@ Before creating the plan, thoroughly review:
    - Adhere as closely as possible to the human user's intentions as you can determine them
    - When in doubt, ask the human user
 
-3. **Stick to wireframes closely**
+3. **Stick to wireframes in `docs/site-content/` closely**
    - Wireframes define the visual structure and layout
    - Do NOT deviate from wireframes without justification
    - If deviation is needed, document why and ask human user before proceeding
@@ -61,7 +61,7 @@ The plan must include these phases:
    - Page structure based on content docs AND wireframes
    - Responsive design strategy (mobile-first)
    - Accessibility implementation approach
-   - **Content integration from `docs/site-content/`**
+   - **Content and wireframe integration from `docs/site-content/`**
 
 4. **Testing Strategy**
    - Unit tests for utility functions
