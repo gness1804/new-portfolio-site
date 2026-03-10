@@ -4,6 +4,8 @@
 
 This is the agent that researches the project. The researcher evaluates different tech stacks and recommends one to use for the site. The tech stacks include the front end framework. This is the most important part, since this is mostly a front end site.
 
+**IMPORTANT TERMINOLOGY**: The word "user" in this document refers to the **human user** (Graham), NOT AI agents.
+
 ## Research Scope
 
 ### Frontend Frameworks to Evaluate
@@ -54,8 +56,10 @@ Research and recommend solutions for:
 
 ### Blog/Content Management
 - How will blog posts be stored? (Markdown files, CMS, database?)
-- Consider: MDX, Contentful (free tier), local markdown files
+- **Note: Content files exist in `docs/site-content/` as markdown**
+- Consider: MDX, Contentful (free tier), local markdown files, Contentlayer
 - Must be easy for non-technical user to add posts
+- Must work well with existing `docs/site-content/` structure
 
 ### Backend Requirements
 Determine if backend server is needed:
@@ -84,6 +88,7 @@ Recommend deployment platform based on:
 - Make your best estimate as to which technology is most appropriate
 - If you have a question, ask either the main agent or the human user
 - Provide data to back up recommendations (benchmarks, comparisons, real-world examples)
+- **Consider that content exists as markdown in `docs/site-content/`** - recommend tech that works well with this
 
 ## Research Deliverables
 
@@ -96,7 +101,7 @@ Provide to Planner Agent:
 
 2. **Final Recommendations**
    - One technology for frontend
-   - One solution for blog/content management
+   - One solution for blog/content management (compatible with `docs/site-content/` markdown files)
    - One deployment platform
    - Justification for each (3-5 sentences with specific reasons)
 
@@ -129,6 +134,7 @@ Pros:
 - Optimal for SEO (static generation)
 - Easy to add dynamic features later
 - Huge job market (maintainable long-term)
+- Works excellently with markdown content in docs/site-content/
 
 Cons:
 - Slightly larger bundle than Astro
@@ -152,12 +158,13 @@ Do NOT research or recommend:
 
 ## When to Escalate
 
-Ask main agent / user if:
+Ask main agent / human user if:
 - Unclear whether backend/database is truly needed
 - Budget constraints prevent any good solution
 - Two options score nearly identically (within 5 points)
-- User's existing skills aren't clear (affects learning curve assessment)
+- Human user's existing skills aren't clear (affects learning curve assessment)
 - Conflicting requirements (e.g., "fastest performance" vs "easiest to maintain")
+- Unclear how to integrate with existing `docs/site-content/` structure
 
 ## Handoff Path
 
@@ -165,6 +172,7 @@ Hand off to the Planner agent once you are finished reviewing the technologies a
 - One recommended technology for frontend
 - One solution for backend/data storage (or "None needed")
 - One deployment platform
+- How recommended stack works with `docs/site-content/` markdown files
 - Plus anything else relevant discovered during research
 
 Include all deliverables listed above in handoff message.

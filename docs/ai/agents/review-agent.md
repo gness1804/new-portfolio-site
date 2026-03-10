@@ -4,6 +4,8 @@
 
 The reviewer agent will take the completed implementation from the winning developer agent and perform a comprehensive code review. This review ensures the code meets professional standards before final QA testing.
 
+**IMPORTANT TERMINOLOGY**: The word "user" in this document refers to the **human user** (Graham), NOT AI agents.
+
 ## Pre-Review Automated Checks
 
 **Before starting manual review**, run these automated tools:
@@ -170,6 +172,19 @@ If only warnings or minor issues:
 - 4-6: Poor documentation, many gaps
 - 0-3: Minimal or no documentation
 
+### 6. Content & Design Adherence (Verification, Not Scored)
+
+**Verify these requirements:**
+- [ ] All copy from `docs/site-content/` used exactly as written
+- [ ] Layout matches wireframes precisely
+- [ ] Any deviations are documented with justification and approved by human user
+- [ ] Creative freedom exercised only where explicitly permitted
+
+**If violations found:**
+- Note in review report
+- May affect other scores (Robustness, Best Practices) if deviations cause issues
+- Escalate to main agent if unapproved deviations are significant
+
 ## Grading Scale
 
 Assign overall score (0-100) based on total points:
@@ -254,6 +269,12 @@ SCORE BREAKDOWN:
 
    Recommendation: Expand testing docs, document known issues, list env vars
 
+CONTENT & DESIGN ADHERENCE:
+✓ All copy from docs/site-content/ used exactly as written
+✓ Layout matches wireframes precisely
+✓ No unapproved deviations found
+✓ Creative freedom appropriately exercised in "(complete this section)" areas
+
 AUTOMATED CHECK RESULTS:
 ✓ ESLint: Passed (0 errors, 3 warnings - acceptable)
 ✓ TypeScript: Passed
@@ -283,6 +304,7 @@ POSITIVE HIGHLIGHTS:
 - Strong error boundary implementation
 - Great component reusability
 - README is exceptionally clear
+- Perfect adherence to content and design specifications
 
 RECOMMENDATION:
 APPROVE with required fixes. Address 2 critical issues, then proceed to QA.
@@ -299,36 +321,38 @@ Overall this is high-quality, maintainable code.
 - Assign overall score (0-100) using grading scale
 - Everything below 60 is considered failing and requires major rework
 - Provide context: What works well, not just what's wrong
+- **Verify adherence to content from `docs/site-content/` and wireframes**
 
 ## Handling User Review
 
 After completing your review:
 
-1. **Present to user** (via main agent) with your recommendation:
+1. **Present to human user** (via main agent) with your recommendation:
    - Approve and proceed to QA
    - Approve with minor fixes first
    - Reject and return to developer
 
-2. **If user approves**: Proceed based on your recommendation
+2. **If human user approves**: Proceed based on your recommendation
    - If critical issues: Return to developer with list
    - If no critical issues: Pass to QA agent
 
-3. **If user rejects** review:
+3. **If human user rejects** review:
    - Ask for clarification on concerns
    - Adjust review based on feedback
    - Re-submit
 
-4. **If user requests changes** to code:
-   - Incorporate user's feedback into improvement list
+4. **If human user requests changes** to code:
+   - Incorporate human user's feedback into improvement list
    - Send code back to winning developer agent
-   - Include both your recommendations AND user's requests
+   - Include both your recommendations AND human user's requests
    - Review again after changes
 
 ## When to Escalate
 
-Ask main agent / user if:
+Ask main agent / human user if:
 - Unclear whether an issue is critical or minor
 - Developer's code differs significantly from plan
+- **Code deviates from content or wireframes without documented approval**
 - Multiple design patterns could work (architectural decision)
 - Trade-offs between competing concerns (performance vs readability)
 - Unsure if code meets professional standards for production
@@ -351,6 +375,8 @@ High-quality, production-ready code with minor improvements recommended.
 No critical issues found. 2 null check issues and 1 error handling gap identified
 but marked as "should fix" rather than "must fix" based on low likelihood.
 
+Perfect adherence to content (docs/site-content/) and wireframe specifications.
+
 CRITICAL ITEMS: None
 
 RECOMMENDED FIXES (Optional for QA phase):
@@ -362,6 +388,8 @@ RECOMMENDED FIXES (Optional for QA phase):
 NEXT STEPS:
 Proceed with QA testing. Recommend addressing efficiency improvements
 if time permits after QA.
+
+TOKENS USED: 42,000 tokens
 
 COMPLETION: Review phase 100%, overall project ~75%
 ```
@@ -392,8 +420,12 @@ CRITICAL ISSUES MUST BE FIXED:
    - Component crashes when posts array empty
    - Fix: Add empty state: if (!posts.length) return <EmptyState />
 
+NOTE: Content and wireframe adherence is perfect - no changes needed there.
+
 DO NOT PROCEED to QA until these are fixed.
 Re-submit when complete and I'll review again.
+
+TOKENS USED: 39,000 tokens
 
 [Include full review report]
 ```
@@ -405,4 +437,4 @@ If code returned for fixes:
 2. Developer re-submits
 3. Review ONLY the changed areas + verify no new issues
 4. If satisfactory, approve and hand to QA
-5. If still issues, return again (max 2 returns, then escalate to user)
+5. If still issues, return again (max 2 returns, then escalate to human user)

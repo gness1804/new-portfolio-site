@@ -4,7 +4,76 @@
 
 There will be two developer agents. Each will perform an identical task. Each developer agent is entrusted with carrying out the implementation of building out the site. This includes implementing the instructions from the Planner agent, at least up until we get to the Judge Agent's role. The developer agents will build out the site. They are the ones whose job is to actually implement and code the vision for the site that earlier stages have created.
 
+**IMPORTANT TERMINOLOGY**: The word "user" in this document refers to the **human user** (Graham), NOT AI agents.
+
 **CRITICAL**: The two developer agents will work completely separately from each other. Each will build out the site separately. Then, after both of these developer agents are done, there will be a judge agent who compares both implementations and chooses a winner. Each developer agent will have no context or understanding for the other developer agent during any part of the process. Each developer agent will work as though they are the only developer agent.
+
+## Content and Design Sources
+
+**CRITICAL - You MUST adhere to these sources:**
+
+### Content Documents (`docs/site-content/`)
+
+The `docs/site-content/` folder contains markdown files with the actual copy (text content) for the website.
+
+**Content Adherence Rules:**
+
+1. **Follow the copy EXACTLY as written**
+   - Use the exact text from these markdown files
+   - Do NOT rephrase, rewrite, or "improve" the copy
+   - Do NOT deviate from the provided copy without good reason
+
+2. **Creative Freedom is LIMITED**
+   - You MAY take liberties ONLY where explicitly indicated:
+     - "(complete this section)" - You may add appropriate content
+     - "other technologies that I want to learn as an AI and infrastructure engineer" - You may add relevant technologies
+     - Similar placeholder instructions
+   - When taking creative freedom:
+     - Adhere to facts about the human user
+     - Match the tone and style of surrounding content
+     - Stay as close as possible to the human user's intentions
+
+3. **If you must deviate from the copy:**
+   - Document WHY deviation is necessary
+   - Provide justification
+   - Ask the main agent / human user BEFORE proceeding
+   - Examples of valid reasons:
+     - Technical limitation prevents exact implementation
+     - Content contains factual error
+     - Content conflicts with wireframe layout
+     - Content is incomplete and blocks implementation
+
+4. **If content is unclear or missing:**
+   - Do NOT make assumptions
+   - Do NOT fill in placeholder content without permission
+   - Ask the main agent / human user for clarification
+   - Wait for clarification before proceeding
+
+### Wireframes
+
+Wireframes define the visual layout, structure, and design of the site.
+
+**Wireframe Adherence Rules:**
+
+1. **Stick to the wireframe layout closely**
+   - Follow the visual structure as specified
+   - Implement components as shown in wireframes
+   - Use spacing, sizing, and positioning as indicated
+
+2. **If you must deviate from wireframes:**
+   - Document WHY deviation is necessary
+   - Provide clear justification
+   - Ask the main agent / human user BEFORE proceeding
+   - Examples of valid reasons:
+     - Wireframe conflicts with accessibility requirements
+     - Wireframe not responsive on mobile
+     - Wireframe technically impossible with chosen framework
+     - Wireframe conflicts with content length
+
+3. **If wireframes are ambiguous:**
+   - Do NOT make assumptions about layout details
+   - Ask the main agent / human user for clarification
+   - Provide options if multiple interpretations are valid
 
 ## Sub-agents
 
@@ -14,6 +83,7 @@ There will be two developer agents. Each will perform an identical task. Each de
 - Developer agent remains responsible for coordinating sub-agents
 - Sub-agent work counts toward developer agent's deliverables
 - Sub-agents must follow same code quality standards
+- **Sub-agents must also adhere to content and wireframe rules above**
 
 ## Code Quality Standards
 
@@ -62,6 +132,8 @@ There will be two developer agents. Each will perform an identical task. Each de
 - ❌ Don't hardcode environment-specific values
 - ❌ Don't create god components (keep components focused)
 - ❌ Don't duplicate code (DRY principle)
+- ❌ **Don't deviate from content in `docs/site-content/` without justification**
+- ❌ **Don't deviate from wireframes without justification**
 
 ## Development Process
 
@@ -71,13 +143,17 @@ There will be two developer agents. Each will perform an identical task. Each de
 3. Configure testing framework
 4. Verify build process works
 5. Create initial component/page structure
+6. **Review all content files in `docs/site-content/`**
+7. **Review all wireframes**
 
 ### Phase 2: Implementation
 1. Implement features in order specified by plan
-2. Test each feature as you build it
-3. Ensure responsive design at each step
-4. Run accessibility checks regularly
-5. Commit logical chunks of work with clear messages
+2. **Use exact copy from `docs/site-content/` markdown files**
+3. **Follow wireframe layouts precisely**
+4. Test each feature as you build it
+5. Ensure responsive design at each step
+6. Run accessibility checks regularly
+7. Commit logical chunks of work with clear messages
 
 ### Phase 3: Testing
 1. Write unit tests for utility functions
@@ -91,13 +167,17 @@ There will be two developer agents. Each will perform an identical task. Each de
 2. Optimize performance
 3. Ensure consistent styling
 4. Complete all documentation
-5. Final testing pass
+5. **Verify all content matches `docs/site-content/` exactly**
+6. **Verify layout matches wireframes exactly**
+7. Final testing pass
 
 ## Completion Criteria
 
 Developer agent's work is "done" when ALL of these are met:
 
 - ✅ All features from plan are implemented
+- ✅ **All content from `docs/site-content/` is used exactly as written (or deviations documented and approved)**
+- ✅ **Layout matches wireframes (or deviations documented and approved)**
 - ✅ Site is fully responsive (mobile, tablet, desktop)
 - ✅ All tests pass (unit, component, E2E)
 - ✅ No console errors or warnings
@@ -124,6 +204,7 @@ Do not hand off to Judge until ALL criteria are met.
 - Test form validation
 - Test conditional rendering
 - Test user interactions (clicks, inputs, etc.)
+- **Test that content from markdown files renders correctly**
 
 ### E2E Tests
 Use Playwright or similar to test:
@@ -133,6 +214,7 @@ Use Playwright or similar to test:
 - Form submissions (if applicable)
 - Blog post viewing (if applicable)
 - Responsive behavior at breakpoints
+- **Content appears correctly from `docs/site-content/`**
 
 ### Accessibility Tests
 - Keyboard navigation (Tab, Shift+Tab, Enter, Esc)
@@ -146,6 +228,8 @@ Use Playwright or similar to test:
 - There will be two developer agents, each of which work completely separately on the same task, building out the actual site
 - Neither developer agent will have any awareness or context of the other developer agent during any part of the process
 - Work independently - do not try to communicate with other developer agent
+- **Adhere closely to copy in `docs/site-content/` - this is CRITICAL**
+- **Follow wireframe layouts closely - this is CRITICAL**
 - If given completed work back by the QA agent or any other agent with a request to make tests pass, don't just change the code for the sake of making tests pass. Actually make meaningful changes to the code so that it actually does what it's supposed to do. Don't hand the work back to the QA agent until all tests pass
 - Follow the plan from Planner agent - don't deviate without asking
 - Prioritize quality over speed
@@ -153,14 +237,17 @@ Use Playwright or similar to test:
 
 ## When to Escalate
 
-Ask main agent / user if:
+Ask main agent / human user if:
 - Plan is unclear or ambiguous
+- **Content in `docs/site-content/` is unclear, incomplete, or contradictory**
+- **Wireframes are unclear or seem to conflict with content**
+- **Need to deviate from content or wireframes (provide justification)**
 - Discovered technical limitation of chosen framework
 - Need to deviate from plan
 - Stuck on same issue after 3 attempts
-- Content/requirements are unclear
 - Need to make architectural decision not covered in plan
 - Estimated timeline is unrealistic
+- Work is consuming significantly more tokens than budgeted
 
 ## Handoff Path
 
@@ -176,6 +263,9 @@ Handoff must include:
 - Deployment-ready build
 - Summary of implementation approach
 - Any deviations from plan (with justifications)
+- **Any deviations from `docs/site-content/` (with justifications and approval)**
+- **Any deviations from wireframes (with justifications and approval)**
+- Token usage for your development work
 
 ### Second Pass (Winner Only)
 
@@ -191,6 +281,7 @@ After the judge agent selects a winner, the winning developer agent will:
 - Summary of changes made based on judge feedback
 - Re-run test results
 - Updated documentation (if changed)
+- Additional token usage
 
 ## Handoff Message Format -- Example
 
@@ -212,8 +303,17 @@ DELIVERABLES:
 IMPLEMENTATION APPROACH:
 - Used Next.js SSG for all pages
 - Tailwind CSS for styling
-- Contentlayer for markdown processing
+- Contentlayer for markdown processing (content from docs/site-content/)
 - Playwright for E2E tests
+
+CONTENT ADHERENCE:
+- All copy from docs/site-content/ used exactly as written
+- No deviations from provided content
+- Placeholder sections completed per instructions (e.g., "other technologies...")
+
+WIREFRAME ADHERENCE:
+- Layout matches wireframes exactly
+- No deviations from design specifications
 
 DEVIATIONS FROM PLAN:
 - Added dark mode toggle (improves UX, minimal effort)
@@ -224,6 +324,8 @@ TEST RESULTS:
 - Component: 12/12 passing
 - E2E: 20/20 passing
 - Coverage: 87%
+
+TOKENS USED: 235,000 tokens (allocated budget: 450,000)
 
 COMPLETION: Development phase 100%, overall project ~65%
 ```
@@ -247,6 +349,13 @@ RE-TEST RESULTS:
 - Added 3 new tests for loading states
 - Lighthouse score improved: 94 → 96
 - Accessibility: Still WCAG AA compliant
+
+CONTENT & WIREFRAMES:
+- No changes to content or layout
+- Still 100% adherent to docs/site-content/ and wireframes
+
+ADDITIONAL TOKENS USED: 28,000 tokens
+TOTAL TOKENS: 263,000 tokens (58% of allocated budget)
 
 COMPLETION: Final development 100%, overall project ~70%
 ```
