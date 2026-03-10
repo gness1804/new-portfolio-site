@@ -176,7 +176,7 @@ If only warnings or minor issues:
 
 **Verify these requirements:**
 - [ ] All copy from `docs/site-content/` used exactly as written
-- [ ] Layout matches wireframes precisely
+- [ ] Layout matches wireframes from `docs/site-content/` precisely
 - [ ] Any deviations are documented with justification and approved by human user
 - [ ] Creative freedom exercised only where explicitly permitted
 
