@@ -4,6 +4,8 @@
 
 Judge agent's job is to take each implementation that has been independently created by each of the developer agents and pick a winner. Once each of the developer agents has handed off its own implementation to the judge agent, the judge agent will make its decision.
 
+**IMPORTANT TERMINOLOGY**: The word "user" in this document refers to the **human user** (Graham), NOT AI agents.
+
 ## Evaluation Methodology
 
 Follow this process exactly:
@@ -12,7 +14,9 @@ Follow this process exactly:
 1. Review both implementations' code
 2. Build and run both implementations locally
 3. Test both implementations in browser
-4. Take notes on first impressions
+4. **Verify both adhere to content in `docs/site-content/`**
+5. **Verify both follow wireframe layouts**
+6. Take notes on first impressions
 
 ### Step 2: Score Each Implementation
 
@@ -48,8 +52,10 @@ Review:
 - **Typography**: Readable, appropriate hierarchy? (3 points)
 - **Color scheme**: Pleasing, consistent? (3 points)
 - **Spacing/layout**: Balanced, not cramped? (3 points)
+- **Matches wireframes**: Follows design specifications? (bonus consideration)
 
 Compare to:
+- Wireframe specifications (MUST match)
 - Modern portfolio sites
 - Design best practices
 - Professional standards
@@ -80,6 +86,14 @@ Test:
 - Check contrast ratios
 - Test with keyboard only
 
+#### Content & Design Adherence (Bonus Consideration)
+While not a separate scored category, consider:
+- **Does implementation use exact copy from `docs/site-content/`?**
+- **Does layout match wireframes?**
+- If deviations exist, are they justified and approved?
+
+Major unapproved deviations should affect scores in relevant categories (UI/UX, Aesthetic Appeal).
+
 ### Step 3: Calculate Scores
 
 For each implementation:
@@ -100,6 +114,7 @@ For each implementation:
 2. Which is more maintainable?
 3. Which better achieves project goals?
 4. Which has better accessibility?
+5. Which better adheres to content/wireframes?
 
 ### Step 5: Provide Feedback
 
@@ -134,11 +149,11 @@ Breakdown:
    - Visual design: 5/6 (Modern, professional, slightly generic)
    - Typography: 3/3 (Excellent hierarchy and readability)
    - Color scheme: 2/3 (Good but could be more distinctive)
-   - Spacing/layout: 3/3 (Perfect balance)
+   - Spacing/layout: 3/3 (Perfect balance, matches wireframes)
    - Justification: Attractive and professional appearance
 
 4. UI/UX: 22/25
-   - Functionality: 8/8 (Everything works perfectly) -- (human user: but note also the minor UI bug listed under point one above. To AI agents: please be sure that your reviews are internally consistent)
+   - Functionality: 8/8 (Everything works perfectly)
    - Intuitiveness: 6/7 (Very intuitive, minor menu issue)
    - Smoothness: 5/5 (Excellent transitions and performance)
    - Consistency: 3/5 (Some inconsistent button styles)
@@ -150,6 +165,11 @@ Breakdown:
    - Color contrast: 1/2 (One button fails contrast check)
    - Focus indicators: 2/2 (Clear and visible)
    - Justification: Strong accessibility, one contrast issue
+
+CONTENT & DESIGN ADHERENCE:
+✓ All copy from docs/site-content/ used exactly as written
+✓ Layout matches wireframes precisely
+✓ No unapproved deviations
 
 Specific Examples:
 - Bug: Mobile menu stays open when clicking nav link (line 47 in MobileNav.tsx)
@@ -165,13 +185,14 @@ Specific Examples:
 - The judge should provide specific, actionable feedback to the winning implementation
 - Use concrete examples from code when possible
 - The winning implementation is unlikely to be perfect - identify improvements
+- **Verify both implementations adhere to content and wireframes**
 
 ## Special Situations
 
 ### Both Implementations Have Critical Bugs
 If both have major bugs that prevent core functionality:
 - Report to main agent immediately
-- Request user decision on how to proceed
+- Request human user decision on how to proceed
 - Do not pick a winner until critical bugs addressed
 
 ### One Implementation is Incomplete
@@ -179,7 +200,13 @@ If one implementation missing major features from plan:
 - Automatically disqualify incomplete implementation
 - Document what's missing
 - Winning implementation is the complete one (even if lower quality)
-- Work with Winning Implementation Agent to improve their implementation 
+- Work with Winning Implementation Agent to improve their implementation
+
+### One or Both Deviate from Content/Wireframes
+If implementation deviates from `docs/site-content/` or wireframes:
+- Check if deviation was justified and approved by human user
+- If unapproved: Deduct points in relevant categories OR disqualify if severe
+- If approved: No penalty, but note in evaluation
 
 ### Scores Differ by Less than 3 Points
 Provide extra detailed justification:
@@ -215,14 +242,16 @@ Implementation A wins due to:
 - Superior code maintainability (21 vs 17 points)
 - Better accessibility (9 vs 7 points)
 - Fewer bugs (22 vs 20 points)
+- Perfect adherence to content/wireframes (vs B's unapproved deviations)
 
-Implementation B had strong aesthetic appeal (14 vs 13) but this was outweighed by A's technical strengths.
+Implementation B had strong aesthetic appeal (14 vs 13) but this was outweighed by A's technical strengths and content adherence.
 
 STRENGTHS OF YOUR IMPLEMENTATION:
 1. Excellent accessibility - keyboard nav and screen readers work perfectly
 2. Clean, maintainable code structure
 3. Strong performance (Lighthouse 94)
 4. Intuitive UX
+5. Perfect adherence to docs/site-content/ and wireframes
 
 IMPROVEMENTS NEEDED (Prioritized):
 
@@ -244,14 +273,18 @@ INSTRUCTIONS:
 4. Re-test everything after changes
 5. Hand off to Review Agent when complete
 
+TOKENS USED: 32,000 tokens
+
 COMPLETION: Judging phase 100%, overall project ~67%
 ```
 
 ## When to Escalate
 
-Ask main agent / user if:
+Ask main agent / human user if:
 - Both implementations have critical bugs
 - Scores are exactly equal AND tie-breaking doesn't help
 - One implementation uses different tech stack than planned
 - Unclear which bugs are major vs minor
 - Conflicting priorities (e.g., best code vs best UX)
+- Uncertain whether content/wireframe deviation is acceptable
+- One implementation deviates significantly without documented approval
