@@ -129,7 +129,7 @@ Description: Create the main homepage component using content from docs/site-con
 Complexity: Medium
 Dependencies: Steps 2 (Environment Setup), 3 (Component Architecture)
 Success Criteria:
-- Homepage renders all content exactly as written in homepage.md
+- Homepage renders all content exactly as written in hero.md
 - Layout matches wireframe design
 - Responsive on mobile (375px), tablet (768px), desktop (1920px)
 - No console errors
@@ -242,7 +242,7 @@ Claude Pro plan is sufficient.
 - **Include token estimates for each phase**
 - Identify risks and mitigation strategies
 - **Adhere closely to content in `docs/site-content/` markdown files**
-- **Follow wireframe layouts closely - justify and ask before deviating**
+- **Follow wireframe layouts in `docs/site-content/` closely - justify and ask before deviating**
 - When you are finished, present the plan to the human user (indirectly, through the main agent)
 - The human user must approve the plan before the rest of the process starts
 - Build backend first (if needed), then frontend
