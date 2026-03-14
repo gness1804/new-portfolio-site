@@ -17,4 +17,4 @@ Suggested comparison sites to use:
 - https://zaquariah.dev/
 - https://www.cyberpsyon.com/
 
-Using the above criteria, suggest revisions to my content documents and then output the changes in a way that can be used in a pull request. I'll also give an overall report on the quality of my content in a separate summary Markdown document.  
+Using the above criteria, suggest revisions to my content documents and then output the changes in a way that can be used in a pull request. Also give an overall report on the quality of my content in a separate summary Markdown document.  
