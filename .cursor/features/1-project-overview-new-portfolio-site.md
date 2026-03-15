@@ -13,8 +13,6 @@ I want to create a new portfolio site. This is a personal site whose aim is to s
 - Hero/landing page
 - Portfolio page that showcases my best technical work.  
 - A history page that details an overview of my former career as a history scholar and professor. It includes a snyopsis of my book and the Amazon link to the book. 
-- A cats page that discusses my love of cats and shows profiles of my former cat and current cat.  
-- A gaming page that discusses some of the games that I like and that I'm currently playing. 
 
 I might add other pages, such as a personal blog or pages on politics or secularism, but right now the pages above will be the pages that will exist for the MVP. 
 
