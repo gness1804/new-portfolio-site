@@ -2,21 +2,29 @@
 
 ## Content
 
-### Intro text - Below page header 
+### Intro text - Below page header
 
-I'm Graham Nessler. I'm an AI and infrastructure engineer, cat lover, and history geek. By day, I help build, maintain, and protect infrastructure at a major health care company. By night? You can find me building out an AI project, reading, or maybe gaming.  
+I'm Graham Nessler — an AWS-certified infrastructure and AI engineer building the future of intelligent systems. By day, I architect, secure, and scale cloud infrastructure at a major healthcare company. By night, I'm prototyping AI agents, contributing to open source, or deep in a book on history or tech.
 
-I'm based in San Antonio, Texas, but I've lived in many different places. I'm also a member of [Alamo Tech Collective](https://alamotechcollective.com/), an organization that works to build out community in the San Antonio tech scene. I have a background in front end engineering and was part of the second front-end cohort of Turing School, a coding school that changed thousands of lives during its decade-long existence. More recently, I have transitioned over to backend and infrastructure, and I now call myself a full stack developer. I'm also learning new AI technologies and have built several sites and services using these technologies.  
+I'm an infrastructure engineer for a major health care company. Some of my main accomplishments over the past few years are: 
+- **Remediated 93 security vulnerabilities** across AWS infrastructure, including 18 high-priority threats
+- **Saved my team hundreds of dollars** in S3 storage costs by optimizing storage for dozens of buckets
+- **Executed 348 zero-downtime configuration changes** maintaining 99.9%+ uptime in production
+- **Delivered emergency security remediations quickly** when our infrastructure encountered problems.
+- **Managed our relationship with our AWS third-party vendor**, including everything from patching to emergency responses to routine assistance requests.
 
-I believe in the ideals of Alamo Tech Collective, Turing, and similar communities. As in the larger society, a tech scene characterized by inclusiveness, equity, collaboration, mutual respect, and a minimum of hierarchy benefits everyone. We're all stronger together.  
+For more on my work accomplishments, see [the Work Accomplishments section](/work-accomplishments)
+
+Based in San Antonio, Texas, I'm an active member of [Alamo Tech Collective](https://alamotechcollective.com/), where we're building a thriving, inclusive tech community. My journey into tech began at Turing School's second front-end cohort — a transformative experience that launched thousands of careers. Since then, I've evolved into full-stack development, earned my AWS certification, and specialized in infrastructure engineering and AI systems. I'm particularly focused on AI agent orchestration, cloud architecture, developer tooling, and practical applications of LLMs.
+
+I believe deeply in the values that drive communities like Alamo Tech Collective and Turing: inclusiveness, collaboration, mutual respect, and low hierarchy. Technology is stronger when diverse voices shape it. We build better systems together.
 
 ### Bottom text - below the portfolio tiles
 
-I came to tech relatively late in life. Before attending Turing, I was a history scholar and instructor. I wrote a [book](https://www.amazon.com/Islandwide-Struggle-Freedom-Emancipation-Reenslavement-ebook/dp/B015ZTG2UM/ref=sr_1_1?ie=UTF8&qid=1446851797&sr=8-1&keywords=graham+nessler) and taught many different courses in areas ranging from United States history to ancient Rome to Haiti. Yet stability eluded me. I underwent a late youth/early midlife career change with several aims:
-- More stability
-- A more dynamic professional field where I would constantly be learning
-- (This is especially critical) geographical freedom 
+My path to tech was unconventional. Before Turing, I was a history scholar and university instructor. I wrote [an academic book](https://www.amazon.com/Islandwide-Struggle-Freedom-Emancipation-Reenslavement-ebook/dp/B015ZTG2UM/ref=sr_1_1?ie=UTF8&qid=1446851797&sr=8-1&keywords=graham+nessler) on revolution and slavery in the Caribbean and taught courses spanning U.S. history, Ancient Rome, and Latin America. But academia couldn't provide what I needed:
 
-I found all of those in tech. As we all strive to adapt to the new world of AI, I feel that a growth mentality and open-mindedness are critical to success. When I'm not working on technical projects, you can find me traveling, keeping up with my human languages, and spending time with my wife and her family.   
+- Career stability and growth potential
+- A field where continuous learning is the norm, not the exception
+- Geographic flexibility and remote work options
 
-
+I found all three in tech. As AI reshapes our industry, I believe adaptability and intellectual curiosity matter more than ever. When I'm not building or learning, I'm traveling internationally, maintaining fluency in French and Spanish, and spending time with my wife and her family.

@@ -12,19 +12,18 @@ github_issue: 1
 I want to create a new portfolio site. This is a personal site whose aim is to showcase my best technical work, describe me and my major interests, and highlight some of these interests in detail. The main components of the site will be as follows: 
 - Hero/landing page
 - Portfolio page that showcases my best technical work.  
+- A work accomplishments page that showcases work accomplishments. 
 - A history page that details an overview of my former career as a history scholar and professor. It includes a snyopsis of my book and the Amazon link to the book. 
-- A cats page that discusses my love of cats and shows profiles of my former cat and current cat.  
-- A gaming page that discusses some of the games that I like and that I'm currently playing. 
 
 I might add other pages, such as a personal blog or pages on politics or secularism, but right now the pages above will be the pages that will exist for the MVP. 
 
 The content for each page is to be found in docs/site-content Markdown files. I also have wireframes for each page that are found in docs/site-content image files. 
 
-This is supposed to be a nice-looking, well-put-together static site about me. This is also an AI-first site. I will orchestrate a team of AI agents that will build out and maintain the site. Their instructions and details are in docs/ai. 
+This is supposed to be a nice-looking, well-put-together static site about me. This is also an AI-first site. Orchestrate a team of AI agents that will build out and maintain the site. For further details on the orchestration, see CLAUDE.md. The documents detailing instructions for specific agents are in docs/ai. 
 
-### Examples
+### Examples of Strong Portfolio Sites
 
-Here are a few examples to look to for inspiration. I don't want you to exactly mimic the format or structure of any of these examples. But these examples offer some aspects that you might consider emulating. 
+Here are a few excellent examples to look to for inspiration. I don't want you to exactly mimic the format or structure of any of these examples. But these examples offer some aspects that you might consider emulating. 
 
 - shumer.dev
 - https://zaquariah.dev/
