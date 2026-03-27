@@ -1,0 +1,140 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Home" currentPage="home">
+  <!-- Hero Section -->
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <h1 class="text-4xl font-bold mb-8 text-gray-900 dark:text-white">Graham Nessler</h1>
+    <div class="prose-content">
+      <p>
+        I'm Graham Nessler, an AWS-certified infrastructure and AI engineer building intelligent systems at scale.
+        By day, I architect, secure, and optimize cloud infrastructure at a major healthcare company. By night, I'm
+        prototyping AI agents, contributing to open source, and exploring the intersection of history and technology.
+      </p>
+      <p>
+        Over the past two years, I've delivered measurable impact across security, infrastructure, and automation:
+      </p>
+      <ul>
+        <li><strong>Remediated 93 security vulnerabilities</strong> across AWS infrastructure, including 18 high-priority threats</li>
+        <li><strong>Executed 348 zero-downtime configuration changes</strong> maintaining 99.9%+ uptime in production</li>
+        <li><strong>Saved thousands in operational costs</strong> through S3 optimization and automated resource management</li>
+        <li><strong>Resolved 91 Prisma Cloud violations</strong> ensuring SOC 2 compliance for critical healthcare systems</li>
+        <li><strong>Built automated solutions</strong> including RDS snapshot lifecycle management and security auditing tools</li>
+      </ul>
+      <p>
+        For detailed work accomplishments, see <a href="/work-accomplishments">the Work Accomplishments section</a>.
+      </p>
+      <p>
+        Based in San Antonio, Texas, I'm an active member of <a href="https://alamotechcollective.com/" target="_blank" rel="noopener noreferrer">Alamo Tech Collective</a>,
+        where we're building a thriving, inclusive tech community. My journey into tech began at Turing School's second
+        front-end cohort, a transformative program that launched thousands of careers. Since then, I've evolved into
+        full-stack development, earned my AWS Solutions Architect certification, and specialized in infrastructure
+        engineering and AI systems.
+      </p>
+      <p>
+        My current focus areas include AI agent orchestration, cloud architecture, infrastructure automation, and
+        practical applications of LLMs. I believe deeply in the values that drive communities like Alamo Tech Collective
+        and Turing: inclusiveness, collaboration, mutual respect, and low hierarchy. Technology is stronger when diverse
+        voices shape it.
+      </p>
+    </div>
+  </section>
+
+  <!-- Project Preview Tiles -->
+  <section class="bg-gray-50 dark:bg-gray-800 py-8 sm:py-10 md:py-16" aria-labelledby="projects-heading">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 id="projects-heading" class="text-2xl font-semibold mb-8 text-gray-900 dark:text-white">Recent Projects</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <a
+          href="/portfolio#friendly-advice-columnist"
+          class="group block bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden shadow-sm hover:shadow-md transition-shadow focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2"
+          aria-label="View Friendly Advice Columnist project on the portfolio page"
+        >
+          <div class="aspect-video overflow-hidden bg-gray-100 dark:bg-gray-800">
+            <img
+              src="/assets/fac-screenshot.png"
+              alt="Friendly Advice Columnist application screenshot"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-gray-900 dark:text-white group-hover:text-red-700 dark:group-hover:text-red-400 transition-colors">Friendly Advice Columnist</h3>
+          </div>
+        </a>
+
+        <a
+          href="/portfolio#receipt-ranger"
+          class="group block bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden shadow-sm hover:shadow-md transition-shadow focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2"
+          aria-label="View Receipt Ranger project on the portfolio page"
+        >
+          <div class="aspect-video overflow-hidden bg-gray-100 dark:bg-gray-800">
+            <img
+              src="/assets/receipt-ranger-screenshot.png"
+              alt="Receipt Ranger application screenshot"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-gray-900 dark:text-white group-hover:text-red-700 dark:group-hover:text-red-400 transition-colors">Receipt Ranger</h3>
+          </div>
+        </a>
+
+        <a
+          href="/portfolio#recipe-chatbot"
+          class="group block bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden shadow-sm hover:shadow-md transition-shadow focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2 sm:col-span-2 lg:col-span-1"
+          aria-label="View Recipe Chatbot project on the portfolio page"
+        >
+          <div class="aspect-video overflow-hidden bg-gray-100 dark:bg-gray-800">
+            <img
+              src="/assets/recipe-chatbot-screenshot.png"
+              alt="Recipe Chatbot application screenshot"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-gray-900 dark:text-white group-hover:text-red-700 dark:group-hover:text-red-400 transition-colors">Recipe Chatbot</h3>
+          </div>
+        </a>
+
+      </div>
+      <div class="mt-8 flex justify-center">
+        <a
+          href="/portfolio"
+          class="inline-block bg-red-600 text-white px-6 py-3 rounded-md font-medium hover:bg-red-700 transition-colors focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2"
+        >
+          View all projects
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Career Transition Section -->
+  <section class="max-w-4xl mx-auto px-4 py-16" aria-labelledby="career-heading">
+    <h2 id="career-heading" class="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">From the Classroom to the Cloud</h2>
+    <div class="prose-content">
+      <p>
+        My path to tech was unconventional. Before Turing, I was a history scholar and university instructor. I wrote
+        <a href="https://www.amazon.com/Islandwide-Struggle-Freedom-Emancipation-Reenslavement-ebook/dp/B015ZTG2UM/ref=sr_1_1?ie=UTF8&qid=1446851797&sr=8-1&keywords=graham+nessler" target="_blank" rel="noopener noreferrer">an academic book</a>
+        on revolution and slavery in the Caribbean and taught courses spanning U.S. history, Ancient Rome, and Latin America.
+        The transition to tech offered what academia couldn't:
+      </p>
+      <ul>
+        <li>Career stability and clear growth trajectory</li>
+        <li>A field that values expansive knowledge more than over-specialization, and where stagnation and complacency are not an option</li>
+        <li>Geographic flexibility and remote work opportunities</li>
+        <li>The chance to build things that solve real problems</li>
+      </ul>
+      <p>
+        As AI reshapes our industry, I believe adaptability and intellectual curiosity matter more than ever. History
+        taught me to think critically about systems, power, and change, skills that transfer directly to designing
+        robust, ethical technology. When I'm not building or learning, I'm traveling internationally, maintaining
+        fluency in French and Spanish, and spending time with my wife and her family.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

@@ -25,7 +25,7 @@ The approximate flow is as follows:
 - I would like some sort of traditional tab format for each of the sections, and a hamburger menu for mobile. 
 - I will provide some content for the site in the form of Markdown files in docs/site-contents. The content may not always be complete in this case, agents should flesh out this content and expand upon it. 
 	1. In content creation and editing, don't guess. Don't make assumptions. If you don't know something, ask me. I don't want there to be any hallucinations or any misstatements on the site.
-	2. To the extent possible, this site should be in my voice. If you need writing samples from me to better learn my voice, then ask for them. 
+	2. To the extent possible, this site should be in my voice. If you need writing samples from me to better learn my voice, then ask for them. To learn more about me, you can also consult the document CLAUDE_CODE_CONTEXT.md. 
 	3. The sub-agents will have creative freedom within the following boundaries: must adhere to my voice, must stick to the facts, must not stray off topic, must not introduce any controversial opinions (e.g. religious, political) unless the content in question is specifically about these topics. The sub-agents must also follow common sense rules as far as not saying anything offensive with respect to gender, sexual orientation, race, religion, etc.  
 - The site will also involve a personal logo. For more details on that, see the cursor features document described above. 
 

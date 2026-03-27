@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const amazonLink = "https://www.amazon.com/Islandwide-Struggle-Freedom-Emancipation-Reenslavement-ebook/dp/B015ZTG2UM/ref=sr_1_1?ie=UTF8&qid=1446851797&sr=8-1&keywords=graham+nessler";
+---
+
+<BaseLayout title="History" currentPage="history">
+  <div class="max-w-3xl mx-auto px-4 py-16">
+    <div class="prose-content">
+      <h1>History</h1>
+
+      <p>
+        I'm a professionally trained historian specializing in Latin American and Caribbean history. My research focused
+        on the Haitian Revolution, an 18th-century slave rebellion on the island of Hispaniola that fundamentally
+        shaped the modern world. This work resulted in{' '}
+        <a href={amazonLink} target="_blank" rel="noopener noreferrer">
+          <em>An Islandwide Struggle for Freedom: Revolution, Emancipation, and Reenslavement in Hispaniola, 1789-1809</em>
+        </a>{' '}
+        (University of North Carolina Press, 2016).
+      </p>
+
+      <!-- Book cover image -->
+      <div class="flex justify-center my-10">
+        <a
+          href={amazonLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Buy An Islandwide Struggle for Freedom on Amazon (opens in new tab)"
+          class="block hover:opacity-90 transition-opacity focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-4 rounded"
+        >
+          <img
+            src="/assets/island-wide-struggle-cover.png"
+            alt="Book cover of An Islandwide Struggle for Freedom: Revolution, Emancipation, and Reenslavement in Hispaniola, 1789-1809 by Graham Nessler"
+            class="max-w-xs w-full shadow-lg rounded"
+            loading="eager"
+          />
+        </a>
+      </div>
+
+      <p>
+        Why study a single revolution for years? Because it reveals how our modern world was forged. The rise of Europe
+        and the United States, patterns of global inequality, the structures of modern capitalism: none of these emerged
+        naturally. They were built through specific historical processes, including racial ideologies, transatlantic slavery,
+        violent resistance, and brutal counter-revolution.
+      </p>
+
+      <p>
+        The sugar in your coffee. Contemporary American politics. Global wealth disparities. All trace back, in
+        significant ways, to centuries of enslavement, resistance, and the systems built to maintain or challenge those
+        hierarchies. For several years, I taught students to see these connections, to understand the present through
+        the lens of deeper history. I hope I helped them think more critically about the world they inherited.
+      </p>
+
+      <p>
+        This historical training shapes how I approach technology. Understanding systems, how they're built, who they
+        serve, how they perpetuate or challenge power, matters just as much in cloud architecture as it does in
+        studying revolutions. Both fields require seeing beyond surface-level narratives to understand underlying
+        structures and long-term consequences.
+      </p>
+
+      <p>
+        My broader historical interests include Ancient Rome, U.S. Reconstruction and Civil Rights, and mainland Latin
+        American history.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

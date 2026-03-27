@@ -1,0 +1,238 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Reusable GitHub icon path
+const githubIconPath = "M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z";
+---
+
+<BaseLayout title="Portfolio" currentPage="portfolio">
+  <div class="max-w-6xl mx-auto px-4 py-16">
+    <h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Portfolio</h1>
+    <p class="text-lg text-gray-600 dark:text-gray-300 mb-12">Here's what I've been building.</p>
+
+    <!-- Project Grid -->
+    <section aria-labelledby="projects-heading">
+      <h2 id="projects-heading" class="sr-only">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- Friendly Advice Columnist -->
+        <article id="friendly-advice-columnist" class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
+          <a
+            href="/assets/fac-screenshot.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View full-size Friendly Advice Columnist screenshot (opens in new tab)"
+            class="block"
+          >
+            <div class="aspect-video overflow-hidden bg-gray-100 dark:bg-gray-700">
+              <img
+                src="/assets/fac-screenshot.png"
+                alt="Friendly Advice Columnist application screenshot"
+                class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+              />
+            </div>
+          </a>
+          <div class="p-6 flex flex-col flex-1">
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Friendly Advice Columnist</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-4 flex-1">
+              AI-powered advice service delivering thoughtful guidance on interpersonal challenges. Built with a
+              three-stage LLM pipeline: input screening, response generation, and voice-matching refinement.
+              Demonstrates practical multi-agent orchestration and sophisticated prompt engineering for consistent,
+              empathetic output.
+            </p>
+            <a
+              href="https://github.com/gness1804/friendly-advice-columnist"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-red-700 dark:text-red-400 font-medium hover:text-gray-600 dark:hover:text-gray-300 focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2 rounded mt-auto"
+              aria-label="View Friendly Advice Columnist on GitHub (opens in new tab)"
+            >
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" d={githubIconPath} clip-rule="evenodd" />
+              </svg>
+              View on GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- Receipt Ranger -->
+        <article id="receipt-ranger" class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
+          <a
+            href="/assets/receipt-ranger-screenshot.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View full-size Receipt Ranger screenshot (opens in new tab)"
+            class="block"
+          >
+            <div class="aspect-video overflow-hidden bg-gray-100 dark:bg-gray-700">
+              <img
+                src="/assets/receipt-ranger-screenshot.png"
+                alt="Receipt Ranger application screenshot"
+                class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+              />
+            </div>
+          </a>
+          <div class="p-6 flex flex-col flex-1">
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Receipt Ranger</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-4 flex-1">
+              AI-powered receipt parser transforming photos into structured spreadsheet data. Combines computer vision
+              and LLMs to extract line items, totals, and merchant details with direct Google Sheets integration.
+              Eliminates manual expense tracking through automated data extraction and formatting.
+            </p>
+            <a
+              href="https://github.com/gness1804/receipt-ranger"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-red-700 dark:text-red-400 font-medium hover:text-gray-600 dark:hover:text-gray-300 focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2 rounded mt-auto"
+              aria-label="View Receipt Ranger on GitHub (opens in new tab)"
+            >
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" d={githubIconPath} clip-rule="evenodd" />
+              </svg>
+              View on GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- Recipe Chatbot -->
+        <article id="recipe-chatbot" class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
+          <a
+            href="/assets/recipe-chatbot-screenshot.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View full-size Recipe Chatbot screenshot (opens in new tab)"
+            class="block"
+          >
+            <div class="aspect-video overflow-hidden bg-gray-100 dark:bg-gray-700">
+              <img
+                src="/assets/recipe-chatbot-screenshot.png"
+                alt="Recipe Chatbot application screenshot"
+                class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+              />
+            </div>
+          </a>
+          <div class="p-6 flex flex-col flex-1">
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Recipe Chatbot</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-4 flex-1">
+              Intelligent recipe assistant built with retrieval-augmented generation (RAG). Searches a vector database
+              of curated recipes using semantic similarity, falling back to LLM generation when needed. Demonstrates
+              practical implementation of hybrid AI systems balancing accuracy with flexibility.
+            </p>
+            <a
+              href="https://github.com/gness1804/recipes-ai-app"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-red-700 dark:text-red-400 font-medium hover:text-gray-600 dark:hover:text-gray-300 focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2 rounded mt-auto"
+              aria-label="View Recipe Chatbot on GitHub (opens in new tab)"
+            >
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" d={githubIconPath} clip-rule="evenodd" />
+              </svg>
+              View on GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- Cursor File System -->
+        <article id="cursor-file-system" class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
+          <a
+            href="/assets/cfs-screenshot.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View full-size Cursor File System screenshot (opens in new tab)"
+            class="block"
+          >
+            <div class="aspect-video overflow-hidden bg-gray-100 dark:bg-gray-700">
+              <img
+                src="/assets/cfs-screenshot.png"
+                alt="Cursor File System application screenshot"
+                class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+              />
+            </div>
+          </a>
+          <div class="p-6 flex flex-col flex-1">
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Cursor File System</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-4 flex-1">
+              Opinionated filesystem architecture designed for AI agent development. Organizes work into categories
+              (features, bugs, refactors, tests) with executable instruction documents that AI agents can interpret
+              and run directly. Includes GitHub Issues synchronization and workflow automation for AI-assisted
+              development.
+            </p>
+            <a
+              href="https://github.com/gness1804/cursor-file-system"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-red-700 dark:text-red-400 font-medium hover:text-gray-600 dark:hover:text-gray-300 focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2 rounded mt-auto"
+              aria-label="View Cursor File System on GitHub (opens in new tab)"
+            >
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" d={githubIconPath} clip-rule="evenodd" />
+              </svg>
+              View on GitHub
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Open Source & Additional Info -->
+    <section class="mt-16 pt-12 border-t border-gray-200 dark:border-gray-700" aria-labelledby="oss-heading">
+      <h2 id="oss-heading" class="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">Open Source Contributions</h2>
+      <ul class="space-y-2 mb-12 text-gray-700 dark:text-gray-300">
+        <li>
+          <a
+            href="https://github.com/Alamo-Tech-Collective/River-City-Resources"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-red-700 dark:text-red-400 font-medium hover:text-gray-600 dark:hover:text-gray-300"
+          >
+            River City Resources
+          </a>
+          , a community resource directory for San Antonio (Alamo Tech Collective)
+        </li>
+        <li>
+          <span class="font-medium">CHARLOTTE</span>, an AI cybersecurity project (closed source)
+        </li>
+        <li>
+          <a
+            href="https://github.com/Alamo-Tech-Collective/Taco-Price-Index"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-red-700 dark:text-red-400 font-medium hover:text-gray-600 dark:hover:text-gray-300"
+          >
+            Taco Price Index
+          </a>
+          , a San Antonio taco price tracker (Alamo Tech Collective)
+        </li>
+      </ul>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Certifications</h2>
+          <p class="text-gray-700 dark:text-gray-300">
+            <span class="font-medium">AWS Certified Solutions Architect</span> (2025)
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Core Skills</h2>
+          <ul class="space-y-1 text-gray-700 dark:text-gray-300">
+            <li>AWS (Lambda, S3, EC2, RDS, CloudFront, IAM, CDK, EventBridge)</li>
+            <li>Python, JavaScript / TypeScript</li>
+            <li>Infrastructure as Code (CloudFormation, CDK)</li>
+            <li>AI / LLM integration, prompt engineering, RAG</li>
+            <li>Security hardening, Prisma Cloud, SOC 2 compliance</li>
+            <li>PostgreSQL, database administration</li>
+            <li>React, Astro, front-end development</li>
+            <li>GitHub, CI/CD, automation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

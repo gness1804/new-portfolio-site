@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Work Accomplishments" currentPage="work-accomplishments">
+  <div class="max-w-4xl mx-auto px-4 py-16">
+    <div class="prose-content">
+      <h1>Work Accomplishments</h1>
+
+      <h2>Infrastructure &amp; Security Engineering</h2>
+      <p><em>Major healthcare company | 2022–Present</em></p>
+
+      <h3>Security Leadership</h3>
+      <ul>
+        <li><strong>Remediated 93 security vulnerabilities</strong> across AWS infrastructure, including 18 high-priority threats affecting critical healthcare systems</li>
+        <li><strong>Resolved 91 Prisma Cloud violations</strong> ensuring SOC 2 compliance and hardening cloud security posture</li>
+        <li>Enforced HTTPS-only policies across 140+ S3 buckets, preventing potential data exposure in production environments</li>
+      </ul>
+
+      <h3>Infrastructure Modernization</h3>
+      <ul>
+        <li><strong>Executed 348 zero-downtime configuration changes</strong> maintaining 99.9%+ uptime across production infrastructure</li>
+        <li>Decommissioned 11 deprecated Lambda functions and optimized serverless architecture, reducing operational overhead</li>
+        <li>Managed 143 S3 initiatives including bucket security hardening, encryption implementation, and cross-account access configuration</li>
+      </ul>
+
+      <h3>Cost Optimization &amp; Efficiency</h3>
+      <ul>
+        <li><strong>Saved thousands in annual costs</strong> through S3 lifecycle policies, intelligent tiering, and automated resource cleanup</li>
+        <li>Researched and documented RDS reserved instance opportunities projecting significant multi-year savings</li>
+        <li>Implemented automated snapshot management reducing storage costs while maintaining compliance requirements</li>
+      </ul>
+
+      <h3>Access &amp; Identity Management</h3>
+      <ul>
+        <li>Administered 66 IAM policy updates implementing least-privilege access control across development and production</li>
+        <li>Managed 97 access requests and conducted regular security audits ensuring compliance with healthcare data regulations</li>
+        <li>Implemented automated access key rotation reducing credential exposure risk and meeting security best practices</li>
+      </ul>
+
+      <h3>Automation &amp; Tooling</h3>
+      <ul>
+        <li><strong>Built EventBridge + Lambda solution</strong> for automated RDS snapshot lifecycle management, eliminating manual operations</li>
+        <li>Created Python scripts for S3 bucket security auditing and automated public access blocking across entire infrastructure</li>
+        <li>Designed AWS CDK templates for repeatable Aurora Serverless database deployment with built-in security controls</li>
+      </ul>
+
+      <h3>Cloud Architecture</h3>
+      <ul>
+        <li>Configured 37 CloudFront distribution updates with enhanced security headers improving application security posture</li>
+        <li>Upgraded AWS WAF Classic to WAF v2, strengthening DDoS protection and threat detection capabilities</li>
+        <li>Implemented VPC Flow Logs and network monitoring infrastructure for enhanced security compliance and incident response</li>
+      </ul>
+
+      <h3>Database Infrastructure</h3>
+      <ul>
+        <li>Upgraded RDS clusters to PostgreSQL 15.6/16.6 for improved performance, security patches, and new feature support</li>
+        <li>Created isolated dev/staging RDS environments enabling safe SaaS pricing API development and testing</li>
+        <li>Managed database performance optimization and query tuning for production workloads</li>
+      </ul>
+
+      <hr />
+
+      <h2>Impact at Scale</h2>
+      <p>
+        <strong>574 completed technical initiatives</strong> since Jan. 1, 2024, demonstrating breadth across cloud
+        infrastructure, security hardening, automation development, and operational excellence. Consistent track record
+        of securing critical healthcare infrastructure while maintaining high availability and reducing operational
+        overhead through intelligent automation.
+      </p>
+      <p>
+        <strong>Technical Stack:</strong> AWS (Lambda, S3, EC2, RDS, CloudFront, CloudFormation, CDK, IAM, KMS,
+        Security Hub, EventBridge), Python, PostgreSQL, Prisma Cloud, infrastructure as code, security automation
+      </p>
+    </div>
+  </div>
+</BaseLayout>

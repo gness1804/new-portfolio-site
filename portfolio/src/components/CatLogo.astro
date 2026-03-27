@@ -1,0 +1,41 @@
+---
+// CatLogo: Simple cat head — gray top, red bottom, black eyes, whiskers
+// Used as site logo, links to homepage
+---
+<a href="/" aria-label="Graham Nessler - Home" class="inline-block hover:opacity-80 transition-opacity">
+  <svg
+    width="60"
+    height="60"
+    viewBox="0 0 60 60"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    focusable="false"
+    role="img"
+  >
+    <title>Graham Nessler - Home</title>
+    <defs>
+      <clipPath id="cat-clip">
+        <circle cx="30" cy="36" r="20" />
+      </clipPath>
+    </defs>
+    <!-- Ears -->
+    <polygon points="14,22 19,8 24,22" fill="#d1d5db" stroke="#0a0a0a" stroke-width="1.5" stroke-linejoin="round" />
+    <polygon points="36,22 41,8 46,22" fill="#d1d5db" stroke="#0a0a0a" stroke-width="1.5" stroke-linejoin="round" />
+    <!-- Head: gray top, red bottom -->
+    <rect x="10" y="16" width="40" height="20" fill="#d1d5db" clip-path="url(#cat-clip)" />
+    <rect x="10" y="36" width="40" height="20" fill="#dc2626" clip-path="url(#cat-clip)" />
+    <!-- Outline -->
+    <circle cx="30" cy="36" r="20" fill="none" stroke="#0a0a0a" stroke-width="1.5" />
+    <!-- Eyes: black on gray -->
+    <ellipse cx="23" cy="32" rx="2.5" ry="3" fill="#0a0a0a" />
+    <ellipse cx="37" cy="32" rx="2.5" ry="3" fill="#0a0a0a" />
+    <!-- Whiskers -->
+    <line x1="8" y1="36" x2="20" y2="38" stroke="#0a0a0a" stroke-width="0.8" stroke-linecap="round" />
+    <line x1="7" y1="39" x2="20" y2="39" stroke="#0a0a0a" stroke-width="0.8" stroke-linecap="round" />
+    <line x1="8" y1="42" x2="20" y2="40" stroke="#0a0a0a" stroke-width="0.8" stroke-linecap="round" />
+    <line x1="52" y1="36" x2="40" y2="38" stroke="#0a0a0a" stroke-width="0.8" stroke-linecap="round" />
+    <line x1="53" y1="39" x2="40" y2="39" stroke="#0a0a0a" stroke-width="0.8" stroke-linecap="round" />
+    <line x1="52" y1="42" x2="40" y2="40" stroke="#0a0a0a" stroke-width="0.8" stroke-linecap="round" />
+  </svg>
+</a>

@@ -1,0 +1,66 @@
+---
+// BaseLayout: Shared layout for all pages
+// Includes global CSS, meta tags, skip link, navbar, and footer
+import NavBar from '../components/NavBar.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  currentPage: 'home' | 'portfolio' | 'work-accomplishments' | 'history';
+}
+
+const {
+  title,
+  description = 'Graham Nessler — AWS-certified infrastructure and AI engineer based in San Antonio, Texas.',
+  currentPage,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="author" content="Graham Nessler" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title} | Graham Nessler</title>
+    <!-- Inline script to apply dark mode before first paint, preventing flash -->
+    <script is:inline>
+      (function() {
+        var saved = localStorage.getItem('theme');
+        // Default to dark if no preference saved
+        var dark = saved === null ? true : saved === 'dark';
+        if (dark) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body class="min-h-screen flex flex-col bg-white dark:bg-gray-900 transition-colors duration-200">
+    <!-- Skip to main content for keyboard/screen reader users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <NavBar currentPage={currentPage} />
+
+    <main id="main-content" class="flex-1" tabindex="-1">
+      <slot />
+    </main>
+
+    <footer class="bg-gray-900 dark:bg-gray-950 text-gray-300 py-8 mt-16">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <p class="text-sm">
+          &copy; {new Date().getFullYear()} Graham Nessler. Built with
+          <a href="https://astro.build" class="text-red-400 hover:text-white" target="_blank" rel="noopener noreferrer">Astro</a>
+          &amp;
+          <a href="https://tailwindcss.com" class="text-red-400 hover:text-white" target="_blank" rel="noopener noreferrer">Tailwind CSS</a>.
+        </p>
+        <p class="text-xs text-gray-500 mt-2">
+          San Antonio, Texas &middot;
+          <a href="https://github.com/gness1804" class="hover:text-gray-300" target="_blank" rel="noopener noreferrer" aria-label="Graham's GitHub profile">GitHub</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
