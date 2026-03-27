@@ -1,3 +1,6 @@
+---
+github_issue: 6
+---
 # Portfolio Site MVP Handoff Document
 
 **Date:** 2026-03-27
