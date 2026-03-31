@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const amazonLink = "https://www.amazon.com/Islandwide-Struggle-Freedom-Emancipation-Reenslavement-ebook/dp/B015ZTG2UM/ref=sr_1_1?ie=UTF8&qid=1446851797&sr=8-1&keywords=graham+nessler";
 ---
 
 <BaseLayout title="Home" currentPage="home">
@@ -16,10 +18,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         Over the past two years, I've delivered measurable impact across security, infrastructure, and automation:
       </p>
       <ul>
-        <li><strong>Remediated 93 security vulnerabilities</strong> across AWS infrastructure, including 18 high-priority threats</li>
-        <li><strong>Executed 348 zero-downtime configuration changes</strong> maintaining 99.9%+ uptime in production</li>
+        <li><strong>Remediated 90+ security vulnerabilities</strong> across AWS infrastructure, including numerous high-priority threats</li>
+        <li><strong>Executed 340+ zero-downtime configuration changes</strong> maintaining 99.9%+ uptime in production</li>
         <li><strong>Saved thousands in operational costs</strong> through S3 optimization and automated resource management</li>
-        <li><strong>Resolved 91 Prisma Cloud violations</strong> ensuring SOC 2 compliance for critical healthcare systems</li>
+        <li><strong>Resolved 90+ Prisma Cloud violations</strong> ensuring SOC 2 compliance for critical healthcare systems</li>
         <li><strong>Built automated solutions</strong> including RDS snapshot lifecycle management and security auditing tools</li>
       </ul>
       <p>
@@ -119,7 +121,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="prose-content">
       <p>
         My path to tech was unconventional. Before Turing, I was a history scholar and university instructor. I wrote
-        <a href="https://www.amazon.com/Islandwide-Struggle-Freedom-Emancipation-Reenslavement-ebook/dp/B015ZTG2UM/ref=sr_1_1?ie=UTF8&qid=1446851797&sr=8-1&keywords=graham+nessler" target="_blank" rel="noopener noreferrer">an academic book</a>
+        <a href={amazonLink} target="_blank" rel="noopener noreferrer">an academic book</a>
         on revolution and slavery in the Caribbean and taught courses spanning U.S. history, Ancient Rome, and Latin America.
         The transition to tech offered what academia couldn't:
       </p>

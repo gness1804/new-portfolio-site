@@ -217,7 +217,12 @@ const navLinks = [
   }
 
   // Initialize theme: default to dark, but respect saved preference
-  const savedTheme = localStorage.getItem('theme');
+  let savedTheme: string | null = null;
+  try {
+    savedTheme = localStorage.getItem('theme');
+  } catch (_) {
+    // localStorage unavailable (e.g. browser privacy mode)
+  }
   const prefersDark = savedTheme === null ? true : savedTheme === 'dark';
   applyTheme(prefersDark);
 
@@ -225,7 +230,11 @@ const navLinks = [
     themeToggle.addEventListener('click', () => {
       const isDark = document.documentElement.classList.contains('dark');
       applyTheme(!isDark);
-      localStorage.setItem('theme', !isDark ? 'dark' : 'light');
+      try {
+        localStorage.setItem('theme', !isDark ? 'dark' : 'light');
+      } catch (_) {
+        // localStorage unavailable (e.g. browser privacy mode)
+      }
     });
   }
 </script>

@@ -24,12 +24,21 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <meta name="author" content="Graham Nessler" />
+    <meta property="og:title" content={`${title} | Graham Nessler`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title} | Graham Nessler</title>
     <!-- Inline script to apply dark mode before first paint, preventing flash -->
     <script is:inline>
       (function() {
-        var saved = localStorage.getItem('theme');
+        var saved = null;
+        try {
+          saved = localStorage.getItem('theme');
+        } catch (_) {
+          // localStorage unavailable (e.g. browser privacy mode)
+        }
         // Default to dark if no preference saved
         var dark = saved === null ? true : saved === 'dark';
         if (dark) {
