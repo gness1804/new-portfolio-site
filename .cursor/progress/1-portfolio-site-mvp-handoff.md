@@ -1,5 +1,6 @@
 ---
 github_issue: 6
+status: done
 ---
 # Portfolio Site MVP Handoff Document
 
