@@ -1,0 +1,6 @@
+# Environment files
+.env
+.env.local
+
+# Project-specific files
+CLAUDE_CODE_CONTEXT.md
