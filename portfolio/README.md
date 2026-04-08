@@ -31,7 +31,8 @@ npm install && npm run dev
 src/
   components/   NavBar and other shared components
   layouts/      BaseLayout wrapping all pages
-  pages/        index, portfolio, work-accomplishments, history
+  content/blog/ blog posts as Markdown (Astro content collections)
+  pages/        index, portfolio, work-accomplishments, history, blog/
   styles/       global CSS
 public/
   assets/       screenshots and static images
