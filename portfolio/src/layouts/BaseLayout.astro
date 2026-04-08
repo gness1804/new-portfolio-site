@@ -7,13 +7,15 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
-  currentPage: 'home' | 'portfolio' | 'work-accomplishments' | 'history';
+  currentPage: 'home' | 'portfolio' | 'work-accomplishments' | 'history' | 'blog';
+  ogType?: 'website' | 'article';
 }
 
 const {
   title,
   description = 'Graham Nessler — AWS-certified infrastructure and AI engineer based in San Antonio, Texas.',
   currentPage,
+  ogType = 'website',
 } = Astro.props;
 ---
 
@@ -26,7 +28,7 @@ const {
     <meta name="author" content="Graham Nessler" />
     <meta property="og:title" content={`${title} | Graham Nessler`} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta name="twitter:card" content="summary" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title} | Graham Nessler</title>

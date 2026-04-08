@@ -12,6 +12,7 @@ test.describe('Navigation (desktop)', () => {
     { label: 'Portfolio', href: '/portfolio', currentPage: 'portfolio' },
     { label: 'Work Accomplishments', href: '/work-accomplishments', currentPage: 'work-accomplishments' },
     { label: 'History', href: '/history', currentPage: 'history' },
+    { label: 'Blog', href: '/blog', currentPage: 'blog' },
   ];
 
   for (const route of navRoutes) {

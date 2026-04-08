@@ -2,7 +2,7 @@
 // NavBar: Desktop tab bar + mobile hamburger menu with dark mode toggle
 // Props: currentPage identifies the active tab
 interface Props {
-  currentPage: 'home' | 'portfolio' | 'work-accomplishments' | 'history';
+  currentPage: 'home' | 'portfolio' | 'work-accomplishments' | 'history' | 'blog';
 }
 const { currentPage } = Astro.props;
 
@@ -11,6 +11,7 @@ const navLinks = [
   { href: '/portfolio', label: 'Portfolio', id: 'portfolio' },
   { href: '/work-accomplishments', label: 'Work Accomplishments', id: 'work-accomplishments' },
   { href: '/history', label: 'History', id: 'history' },
+  { href: '/blog', label: 'Blog', id: 'blog' },
 ];
 ---
 
