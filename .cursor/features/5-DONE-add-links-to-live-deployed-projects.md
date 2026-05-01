@@ -21,3 +21,5 @@ Here are the live links to each of my projects:
 When each project has a link associated with it, this will make it easier for people viewing the site to go to an actual project and interact with it.   
 
 ## Acceptance criteria
+
+<!-- DONE -->
