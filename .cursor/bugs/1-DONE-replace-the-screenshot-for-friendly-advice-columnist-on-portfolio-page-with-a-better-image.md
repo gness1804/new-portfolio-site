@@ -17,4 +17,8 @@ We need a new screenshot that solves these problems. Here is one that can be use
 
 Replace the existing screenshot with the new one on the portfolio page. 
 
+After replacing the image, commit the relevant changes and then deploy the site with the new changes. 
+
 ## Acceptance criteria
+
+<!-- DONE -->
