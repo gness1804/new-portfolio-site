@@ -54,6 +54,36 @@ test.describe('Portfolio page', () => {
     await expect(link).toHaveAttribute('rel', 'noopener noreferrer');
   });
 
+  test('Friendly Advice Columnist live site link has correct href', async ({ page }) => {
+    const link = page.getByRole('link', { name: /Visit Friendly Advice Columnist live site/i });
+    await expect(link).toBeVisible();
+    await expect(link).toHaveAttribute('href', 'https://friendly-advice-columnist.com/');
+    await expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+    await expect(link).toHaveAttribute('target', '_blank');
+  });
+
+  test('Receipt Ranger live site link has correct href', async ({ page }) => {
+    const link = page.getByRole('link', { name: /Visit Receipt Ranger live site/i });
+    await expect(link).toBeVisible();
+    await expect(link).toHaveAttribute('href', 'https://receipt-ranger.com/');
+    await expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+    await expect(link).toHaveAttribute('target', '_blank');
+  });
+
+  test('Recipe Chatbot live site link has correct href', async ({ page }) => {
+    const link = page.getByRole('link', { name: /Visit Recipe Chatbot live site/i });
+    await expect(link).toBeVisible();
+    await expect(link).toHaveAttribute('href', 'https://recipes-ai-app.onrender.com/');
+    await expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+    await expect(link).toHaveAttribute('target', '_blank');
+  });
+
+  test('Cursor File System has no live site link (CLI-only)', async ({ page }) => {
+    const cfsCard = page.locator('#cursor-file-system');
+    const liveLink = cfsCard.getByRole('link', { name: /live site/i });
+    await expect(liveLink).toHaveCount(0);
+  });
+
   test('Open Source Contributions section is visible', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Open Source Contributions' })).toBeVisible();
   });
