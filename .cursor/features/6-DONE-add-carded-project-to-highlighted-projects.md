@@ -14,3 +14,5 @@ Recently I built a simple application called Carded that takes in a photo of a b
 I want to add this project to the highlighted projects on my portfolio site. Follow the model of the existing highlighted projects and add the relevant information. Above all, it should highlight the technical achievement and practical uses of the application. 
 
 ## Acceptance criteria
+
+<!-- DONE -->
