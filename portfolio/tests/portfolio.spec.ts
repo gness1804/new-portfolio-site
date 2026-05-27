@@ -19,11 +19,27 @@ test.describe('Portfolio page', () => {
     await expect(page.getByRole('heading', { name: 'Portfolio', level: 1 })).toBeVisible();
   });
 
-  test('all 4 project cards render with correct titles', async ({ page }) => {
+  test('all 5 project cards render with correct titles', async ({ page }) => {
+    await expect(page.getByRole('heading', { name: 'Carded' })).toBeVisible();
     await expect(page.getByRole('heading', { name: 'Friendly Advice Columnist' })).toBeVisible();
     await expect(page.getByRole('heading', { name: 'Receipt Ranger' })).toBeVisible();
     await expect(page.getByRole('heading', { name: 'Recipe Chatbot' })).toBeVisible();
     await expect(page.getByRole('heading', { name: 'Cursor File System' })).toBeVisible();
+  });
+
+  test('Carded GitHub link has correct href', async ({ page }) => {
+    const link = page.getByRole('link', { name: /Carded.*GitHub/i });
+    await expect(link).toBeVisible();
+    await expect(link).toHaveAttribute('href', 'https://github.com/gness1804/carded');
+    await expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+  });
+
+  test('Carded live site link has correct href', async ({ page }) => {
+    const link = page.getByRole('link', { name: /Visit Carded live site/i });
+    await expect(link).toBeVisible();
+    await expect(link).toHaveAttribute('href', 'https://carded.onrender.com/');
+    await expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+    await expect(link).toHaveAttribute('target', '_blank');
   });
 
   test('Friendly Advice Columnist GitHub link has correct href', async ({ page }) => {
@@ -107,11 +123,13 @@ test.describe('Portfolio page', () => {
 
   test('project cards have anchor IDs for deep linking', async ({ page }) => {
     // Verify the anchor IDs exist for hash navigation from home page tiles
+    const carded = page.locator('#carded');
     const fac = page.locator('#friendly-advice-columnist');
     const rr = page.locator('#receipt-ranger');
     const rc = page.locator('#recipe-chatbot');
     const cfs = page.locator('#cursor-file-system');
 
+    await expect(carded).toBeAttached();
     await expect(fac).toBeAttached();
     await expect(rr).toBeAttached();
     await expect(rc).toBeAttached();

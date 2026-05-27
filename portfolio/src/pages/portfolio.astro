@@ -18,6 +18,61 @@ const externalLinkIconPath = "M14 3h7v7h-2V6.414l-9.293 9.293-1.414-1.414L17.586
       <h2 id="projects-heading" class="sr-only">Projects</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
+        <!-- Carded -->
+        <article id="carded" class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
+          <a
+            href="/assets/carded-screenshot.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View full-size Carded screenshot (opens in new tab)"
+            class="block"
+          >
+            <div class="aspect-video overflow-hidden bg-gray-100 dark:bg-gray-700">
+              <img
+                src="/assets/carded-screenshot.png"
+                alt="Carded application screenshot"
+                class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+              />
+            </div>
+          </a>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Carded</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4 flex-1">
+              AI-powered business card scanner that turns a photo into importable contact data. Uses Claude's vision
+              model with BAML for structured field extraction, then exports as a vCard (.vcf) for Apple Contacts or a
+              CSV for Google Contacts. Implements a bring-your-own-key design that never stores API credentials in
+              plaintext, pairing practical utility with privacy-first architecture.
+            </p>
+            <div class="flex flex-wrap gap-x-6 gap-y-2 mt-auto">
+              <a
+                href="https://carded.onrender.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 text-red-700 dark:text-red-400 font-medium hover:text-gray-600 dark:hover:text-gray-300 focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2 rounded"
+                aria-label="Visit Carded live site (opens in new tab)"
+              >
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d={externalLinkIconPath} />
+                </svg>
+                Visit Live Site
+              </a>
+              <a
+                href="https://github.com/gness1804/carded"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 text-red-700 dark:text-red-400 font-medium hover:text-gray-600 dark:hover:text-gray-300 focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2 rounded"
+                aria-label="View Carded on GitHub (opens in new tab)"
+              >
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" d={githubIconPath} clip-rule="evenodd" />
+                </svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
         <!-- Friendly Advice Columnist -->
         <article id="friendly-advice-columnist" class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
           <a
