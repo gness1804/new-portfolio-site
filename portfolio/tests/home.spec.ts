@@ -30,7 +30,8 @@ test.describe('Home page', () => {
     await expect(page.getByText('Resolved 90+ Prisma Cloud violations')).toBeVisible();
   });
 
-  test('three project preview tiles render with correct titles', async ({ page }) => {
+  test('four project preview tiles render with correct titles', async ({ page }) => {
+    await expect(page.getByRole('heading', { name: 'Carded' })).toBeVisible();
     await expect(page.getByRole('heading', { name: 'Friendly Advice Columnist' })).toBeVisible();
     await expect(page.getByRole('heading', { name: 'Receipt Ranger' })).toBeVisible();
     await expect(page.getByRole('heading', { name: 'Recipe Chatbot' })).toBeVisible();
