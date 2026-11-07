@@ -14,3 +14,13 @@ git config core.hooksPath .githooks
 They block AWS account IDs, ARNs, access keys and private-key headers in staged
 content, in filenames, and in the commit message. Until you run that line, a
 fresh clone commits unprotected.
+
+## License
+
+The code is MIT. See [LICENSE](LICENSE).
+
+The MIT license does not cover the site's images or written content. That
+includes screenshots, the book cover, and other images (`portfolio/public/assets/`,
+`docs/`), blog posts (`portfolio/src/content/`), page copy, and the files in
+`docs/site-content/`. Those are Copyright (c) 2026 Graham Nessler, all rights
+reserved.
